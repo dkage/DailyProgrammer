@@ -18,8 +18,19 @@ def smorse(word):
     return morse_encode
 
 
-print(smorse('programmer'))
+# print(smorse('programmer'))
 
 # Optional bonus challenges
 
+# 1
+
+words_file = open("Challenge_380_word_list.txt", "r")
+words_array = words_file.read().splitlines()
+
+words_array_encoded = []
+
+for word in words_array:
+    words_array_encoded.append(smorse(word))
+
+#TODO find only sequence that repeat 13 times
 
