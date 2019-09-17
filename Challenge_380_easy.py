@@ -32,8 +32,6 @@ for word in words_array:
 morse_code = {}
 # for morse in words_array_encoded:
 for morse in words_array_encoded:
-    # if morse == '-...-....-.--.':
-        # print(morse)
     if morse in morse_code.keys():
         morse_code[morse] = morse_code[morse] + 1
     else:
