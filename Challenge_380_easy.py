@@ -4,7 +4,7 @@
 # Basic answer
 morse_alpha = ".- -... -.-. -.. . ..-. --. .... .. .--- -.- .-.. -- -. --- .--. --.- .-. ... - ..- ...- .-- -..- -.--" \
               " --.."
-alpha = "ABCEDFGHIJKLMNOPQRSTUVWXYZ"
+alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 morse_split = morse_alpha.split()
 
@@ -18,10 +18,7 @@ def smorse(word):
     return morse_encode
 
 
-# print(smorse('programmer'))
-
 # Optional bonus challenges
-
 # 1
 
 words_file = open("Challenge_380_word_list.txt", "r")
@@ -32,5 +29,21 @@ words_array_encoded = []
 for word in words_array:
     words_array_encoded.append(smorse(word))
 
-#TODO find only sequence that repeat 13 times
+morse_code = {}
+# for morse in words_array_encoded:
+for morse in words_array_encoded:
+    # if morse == '-...-....-.--.':
+        # print(morse)
+    if morse in morse_code.keys():
+        morse_code[morse] = morse_code[morse] + 1
+    else:
+        morse_code[morse] = 1
+
+
+for key in morse_code.keys():
+    if morse_code[key] == 13:
+        print(key)
+        print(morse_code[key])
+
+# 2
 
