@@ -1,6 +1,8 @@
 # Challenge #380 [Easy] Smooshed Morse Code 1
 # https://www.reddit.com/r/dailyprogrammer/comments/cmd1hb/20190805_challenge_380_easy_smooshed_morse_code_1/
 
+from itertools import product  # import used for bonus challenge 5
+
 # Basic answer
 morse_alpha = ".- -... -.-. -.. . ..-. --. .... .. .--- -.- .-.. -- -. --- .--. --.- .-. ... - ..- ...- .-- -..- -.--" \
               " --.."
@@ -101,5 +103,11 @@ print('=========================================================================
 print('===========================================================================\n\n')
 print('#5')
 
+
 # 5 - Morse '--.---.---.--' is one of five 13-character sequences that does not appear in the encoding of any word.
 # Find the other four.
+
+chars = ['.', '-']
+combinations = [''.join(x) for x in product(chars, repeat=13)]
+
+
