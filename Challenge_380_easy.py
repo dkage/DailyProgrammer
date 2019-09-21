@@ -26,9 +26,10 @@ words_array_encoded = []
 for word in words_array:
     words_array_encoded.append(smorse(word))
 
+
 # Optional bonus challenges
 # 1 - Find the only sequence that's the code for 13 different words.
-def challenge_1 ():
+def challenge_1():
 
     morse_code = {}
     # for morse in words_array_encoded:
@@ -88,7 +89,7 @@ def challenge_4 ():
 
 # 5 - Morse '--.---.---.--' is one of five 13-character sequences that does not appear in the encoding of any word.
 # Find the other four.
-### somethins is odd about this one. I dont think I understand it correctly
+# something is odd about this one. I dont think I understand it correctly
 
 def challenge_5 ():
     chars = ['.', '-']
